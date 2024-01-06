@@ -5,7 +5,7 @@ import torch
 import numpy as np
 
 model = Swin2SRForImageSuperResolution.from_pretrained("caidas/swin2SR-classical-sr-x2-64")
-image = Image.open("IMG_2806.JPG")
+image = Image.open("image.jpg")
 processor = Swin2SRImageProcessor()
 
 pixel_values = processor(image, return_tensors="pt").pixel_values
